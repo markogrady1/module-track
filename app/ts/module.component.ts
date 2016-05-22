@@ -12,12 +12,16 @@ export class ModuleComponent {
     moduleName:string;
     courseName:string;
     desc:string;
+    markAwarded:number;
+    numCourseworks:number;
     static count:number = 0
-    doSomething(moduleId:number, moduleName:string, courseName:string, desc:string) {
+    addModule(moduleId:number, moduleName:string, courseName:string, desc:string, markAwarded:number, numCourseworks:number) {
         this.moduleId = moduleId;
         this.moduleName = moduleName;
         this.courseName = courseName;
         this.desc = desc;
+        this.markAwarded = markAwarded;
+        this.numCourseworks = numCourseworks;
     }
      clicker(val) {
          var item = document.getElementsByClassName("item")
