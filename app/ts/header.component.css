@@ -1,0 +1,8 @@
+header.header {
+    height: 100px;
+    background-color: #252526;
+    color: #fff;
+    font-size: 2em;
+    padding: 20px;
+    margin:0;
+}
