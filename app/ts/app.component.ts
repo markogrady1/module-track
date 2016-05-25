@@ -1,12 +1,13 @@
 import {Component} from 'angular2/core';
 import {HeaderComponent} from './header/header.component';
 import {ModuleComponent} from './module.component';
+import {YearComponent} from './years/years.component'
 
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/ts/app.component.html',
-    directives:[ModuleComponent,HeaderComponent]
+    directives:[ModuleComponent,HeaderComponent, YearComponent]
 })
 
 export class AppComponent {
