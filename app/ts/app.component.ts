@@ -21,5 +21,14 @@ export class AppComponent {
        if(this.moduleGradeOne != "") {
            console.log("output", this.moduleGradeOne)
        }
+        if(this.moduleWeightOne != "") {
+           console.log("output", this.moduleGradeOne)
+       }
+        if(this.moduleGradeTwo != "") {
+           console.log("output", this.moduleGradeOne)
+       }
+        if(this.moduleWeightTwo != "") {
+           console.log("output", this.moduleGradeOne)
+       }
    }
 }
