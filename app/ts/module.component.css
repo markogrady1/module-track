@@ -1,0 +1,21 @@
+
+.weight-txt, .grade-txt {
+    padding-bottom: 5px;
+    line-height: 30px;
+    width: 100px;
+    border: 2px solid #a9a9a9;
+    border-radius: 8px;
+    font-size: 2em;
+    margin: 5px;
+    color: #a9a9a9;
+    text-align: center
+}
+
+.grade-lbl {
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+.weight-lbl {
+    padding-left: 10px;
+}
