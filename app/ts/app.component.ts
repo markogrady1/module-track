@@ -10,6 +10,16 @@ import {ModuleComponent} from './module.component';
 })
 
 export class AppComponent {
+    public moduleGradeOne:string;
+    public moduleWeightOne:string;
+    public moduleGradeTwo:string;
+    public moduleWeightTwo:string;
+
     public mainTitle:string = "Enter Module Data"
    
+   public outPut() {
+       if(this.moduleGradeOne != "") {
+           console.log("output", this.moduleGradeOne)
+       }
+   }
 }
