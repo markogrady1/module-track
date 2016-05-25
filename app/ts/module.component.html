@@ -1,15 +1,13 @@
 
-<section>
    <label for="grade-txt" class="grade-lbl">Grade</label>
 <label for="weight-txt">Weight</label><br>
-<input type="number" class="grade-txt" title="gradeTxt" max="100" min="0"  (keyup)="validateGrade(gradeTxt, weightTxt)" #gradeTxt>
-<input type="number"  class="weight-txt" title="weightTxt" max="100" min="0" (keyup)="validateWeight(weightTxt, gradeTxt)" #weightTxt><div class="add-module">+</div><br>
+<section *ngFor="#el of modules">
+
+<input type="number" class="grade-txt" title="{{el}}" max="100" min="0"  (keyup)="validateGrade(gradeTxt, weightTxt, gradeTxt.title)" #gradeTxt>
+<input type="number"  class="weight-txt"  title="{{el}}" max="100" min="0" (keyup)="validateWeight(weightTxt, gradeTxt, weightTxt.title)" #weightTxt><br>
 <br>
 </section>
-
-<section [ngClass]="{
-                isEmpty: gradeTxt.value != '' || weightTxt.value != ''
-                
-                }" [ngStyle]="{display:weightTxt.value === '' && gradeTxt.value === '' ? 'none' : 'block'}">
+<div class="add-module"  (click)="addModule()">+</div>
+<div >
     <br><div class="calcOutput" [textContent]="output">OUTPUT</div><br><br><br>
-</section>
+</div>
