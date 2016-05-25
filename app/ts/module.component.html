@@ -1,7 +1,7 @@
 
    <label for="grade-txt" class="grade-lbl">Grade</label>
 <label for="weight-txt">Weight</label><br>
-<section *ngFor="#el of modules">
+<section *ngFor="#el of modulesRows">
 
 <input type="number" class="grade-txt" title="{{el}}" max="100" min="0"  (keyup)="validateGrade(gradeTxt, weightTxt, gradeTxt.title)" #gradeTxt>
 <input type="number"  class="weight-txt"  title="{{el}}" max="100" min="0" (keyup)="validateWeight(weightTxt, gradeTxt, weightTxt.title)" #weightTxt><br>
