@@ -9,51 +9,22 @@ import {Component} from 'angular2/core';
 })
 
 export class ModuleComponent {
-    moduleGrade1:number = 0;
-    moduleWeight1:number = 0;
-    moduleGrade2:number = 0;
-    moduleWeight2:number = 0;
-    moduleListItem:ModuleComponent;
-    moduleId:number;
-    moduleName:string;
-    courseName:string;
-    desc:string;
-    markAwarded:number;
-    numCourseworks:number;
-    static count:number = 0;
+   moduleGrade1:number = 0;
+   moduleWeight1:number = 0;
+   output:number = 0;
    public calculatedAmount: number = 10;
     
-    
-    addModule(moduleId:number, moduleName:string, courseName:string, desc:string, markAwarded:number, numCourseworks:number) {
-        this.moduleId = moduleId;
-        this.moduleName = moduleName;
-        this.courseName = courseName;
-        this.desc = desc;
-        this.markAwarded = markAwarded;
-        this.numCourseworks = numCourseworks;
-        
-    }
-     clicker(val) {
-        var item = document.getElementsByClassName("item")
-        var txt = document.getElementsByClassName("module-txt")
-        // txt[0].value = val.target.id 
-        console.log(val.target)
+    validateGrade(field1, otherField) {
+        field1.value = field1.value > 100 ? 100 : field1.value;
+        field1.value = field1.value < 0 ? 0 : field1.value;
+        this.moduleGrade1 = field1.value
+        this.output = (this.moduleGrade1 * otherField.value) / 100
     }
     
-    validateAmount(field) {
-        field.value = field.value > 100 ? 100 : field.value;
-        field.value = field.value < 0 ? 0 : field.value;
-             console.log(this.moduleGrade1)
-
-    }
-    
-    //    validateSecondFieldsAmount(field) {
-    //     field.value = field.value > 100 ? 100 : field.value;
-    //     field.value = field.value < 0 ? 0 : field.value;
-    //     this.secondModule = field.value;
-    // }
-    
-    private calculateAverage() {
-     
+     validateWeight(field1, otherField) {
+        field1.value = field1.value > 100 ? 100 : field1.value;
+        field1.value = field1.value < 0 ? 0 : field1.value;
+        this.moduleWeight1 = field1.value
+        this.output = (this.moduleWeight1 * otherField.value) / 100
     }
 }

@@ -19,3 +19,25 @@
 .weight-lbl {
     padding-left: 10px;
 }
+
+.input-txtfield {
+    padding-bottom: 5px;
+    line-height: 30px;
+    width: 300px;
+    border: 2px solid #a9a9a9;
+    border-radius: 8px;
+    font-size: 2em;
+    margin: 5px;
+    color: #a9a9a9;
+    text-align: center
+}
+
+.add-module {
+    width: 50px;
+    height: 50px;
+    /*padding: 5px;*/
+    font-size: 2em;
+    text-align: center;
+    background-color: #a9a9a9
+   
+}

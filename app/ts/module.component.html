@@ -1,15 +1,15 @@
 
-<label for="grade-txt" class="grade-lbl">Grade</label>
+<section>
+   <label for="grade-txt" class="grade-lbl">Grade</label>
 <label for="weight-txt">Weight</label><br>
-<input type="number" class="grade-txt" title="gradeTxt" max="100" min="0"  (keyup)="validateAmount(gradeTxt)" #gradeTxt>
-<input type="number"  class="weight-txt" title="weightTxt" max="100" min="0" (keyup)="validateAmount(weightTxt)" #weightTxt><br>
-<input type="number" class="grade-txt" title="gradeTxt2" max="100" min="0" (keyup)="validateAmount(gradeTxt2)" #gradeTxt2>
-<input type="number" class="weight-txt" title="weightTxt2" max="100" min="0" (keyup)="validateAmount(weightTxt2)" #weightTxt2><br>
-<!--<ul>
-    <li>{{moduleGrade1 * moduleGrade2}} </li>
-</ul>-->
+<input type="number" class="grade-txt" title="gradeTxt" max="100" min="0"  (keyup)="validateGrade(gradeTxt, weightTxt)" #gradeTxt>
+<input type="number"  class="weight-txt" title="weightTxt" max="100" min="0" (keyup)="validateWeight(weightTxt, gradeTxt)" #weightTxt><div class="add-module">+</div><br>
+<br>
+</section>
 
-
-<!--<br><input class="gradeCalc-btn"  [calc]="calculatedAmount"><br><br><br>-->
-
-
+<section [ngClass]="{
+                isEmpty: gradeTxt.value != '' || weightTxt.value != ''
+                
+                }" [ngStyle]="{display:weightTxt.value === '' && gradeTxt.value === '' ? 'none' : 'block'}">
+    <br><div class="calcOutput" [textContent]="output">OUTPUT</div><br><br><br>
+</section>
